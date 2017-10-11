@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: './index',
   output: {
-    path: path.join(__dirname, 'static'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },

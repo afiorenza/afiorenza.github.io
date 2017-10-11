@@ -1,4 +1,4 @@
-rm -rf static
+rm -rf dist
 npm run build
 git add .
 git commit -m "deploy"
