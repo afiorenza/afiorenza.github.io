@@ -7,7 +7,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>probando react</div>
+      <div>this is a test</div>
     );
   }
 }
