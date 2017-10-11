@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
+import {AppContainer} from 'react-hot-loader'
 
 class App extends React.Component {
   constructor(props) {
@@ -7,12 +8,11 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>probando react</div>
+      <AppContainer>
+        <div>probando react</div>
+      </AppContainer>
     );
   }
 }
 
-render(
-  <App />,
-  document.getElementById('root')
-);
+render(<App />, document.getElementById('root'));
