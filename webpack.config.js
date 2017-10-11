@@ -3,29 +3,27 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/dev-server',
     './index'
   ],
   output: {
     path: __dirname,
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/dist/'
   },
-  resolve: {
-    extensions: ['', '.js']
-  },
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader?presets[]=react,presets[]=es2015']
+        loaders: "babel-loader",
+        include: __dirname,
+        query: {
+          presets: ['es2015', 'react', 'react-hmre']
+        }
       }
     ]
   }

@@ -8,12 +8,8 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  resolve: {
-    extensions: ['', '.js']
-  },
   devtool: 'source-map',
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
@@ -30,7 +26,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader?presets[]=react,presets[]=es2015']
+        loaders: "babel-loader",
+        include: __dirname,
+        query: {
+          presets: ['es2015', 'react']
+        }
       }
     ]
   }
