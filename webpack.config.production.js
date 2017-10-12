@@ -46,8 +46,8 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           use: [
-            'css-loader',
-            `sass-loader?includePaths[]=${resolve(__dirname)}`,
+            'css-loader?sourceMap',
+            `sass-loader?sourceMapContents=true`,
             'postcss-loader'
           ]
         })
