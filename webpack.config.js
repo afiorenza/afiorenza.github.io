@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+var resolve = require('path').resolve
 
 module.exports = {
   entry: [
@@ -15,7 +16,7 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin()
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -24,7 +25,26 @@ module.exports = {
         query: {
           presets: ['es2015', 'react', 'react-hmre']
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {loader: "style-loader"},
+          {loader: "css-loader"},
+          {loader: "sass-loader"}
+        ]
       }
+    ]
+  },
+  resolve: {
+    alias: {
+      'components': resolve(__dirname, 'src/components'),
+      'views': resolve(__dirname, 'src/views')
+    },
+    extensions: ['*', '.js', '.jsx'],
+    modules: [
+      'src',
+      'node_modules'
     ]
   }
 };

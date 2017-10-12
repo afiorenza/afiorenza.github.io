@@ -27,6 +27,7 @@
   "homepage": "https://github.com/afiorenza/react-eth#readme",
   "dependencies": {
     "react": "^15.4.1",
+    "react-bootstrap": "^0.31.3",
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
@@ -36,6 +37,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
     "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.1"
   }
