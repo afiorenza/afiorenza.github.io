@@ -1,7 +1,30 @@
-.Header {
-  position: fixed;
-  top: 0;
-  width: 100%; }
+.SocialBadges {
+  font-size: 5rem !important; }
+.Footer--social-media {
+  padding-bottom: 1rem;
+  text-align: center; }
+
+.Footer--social-media-icons {
+  padding-right: 3rem; }
+.Body {
+  background-color: white;
+  border: 2px solid black; }
+  .Body--container {
+    padding: 1rem; }
+.App {
+  margin: -5rem auto 0;
+  width: 70%; }
+  .App--header {
+    background-color: #e9ebee; }
+  .App--profileImage-circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 100px;
+    left: 40px;
+    position: relative;
+    width: 15rem; }
+  .App--title {
+    padding-left: 22rem; }
 @charset "UTF-8";
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2331,5 +2354,17 @@
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto' !important; }
+
+body {
+  background-color: #e9ebee !important; }
 
 /*# sourceMappingURL=style.css.map*/
