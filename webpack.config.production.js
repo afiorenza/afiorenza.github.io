@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const resolve = require('path').resolve
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './index',
@@ -22,7 +23,13 @@ module.exports = {
         warnings: false
       }
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new CopyWebpackPlugin([
+      {
+        from: path.join(__dirname, 'assets/**/*'),
+        to: path.join(__dirname, 'dist')
+      }
+    ])
   ],
   module: {
     rules: [
