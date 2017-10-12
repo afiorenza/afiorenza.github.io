@@ -3,11 +3,6 @@ const path = require('path');
 const resolve = require('path').resolve
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const extractSass = new ExtractTextPlugin({
-  filename: "style.css"
-});
-
-
 module.exports = {
   entry: './index',
   output: {
@@ -27,7 +22,7 @@ module.exports = {
         warnings: false
       }
     }),
-    extractSass
+    new ExtractTextPlugin('style.css')
   ],
   module: {
     rules: [
@@ -42,13 +37,17 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: extractSass.extract({
+        use: ExtractTextPlugin.extract({
           use: [
-            {loader: "css-loader"},
-            {loader: "sass-loader"}
-          ],
-          fallback: "style-loader"
+            'css-loader',
+            `sass-loader?includePaths[]=${resolve(__dirname)}`,
+            'postcss-loader'
+          ]
         })
+      },
+      {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
   },

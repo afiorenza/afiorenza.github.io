@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
-var resolve = require('path').resolve
+const resolve = require('path').resolve
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: [
@@ -13,7 +14,8 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new ExtractTextPlugin('style.css')
   ],
   module: {
     rules: [
@@ -28,11 +30,17 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          {loader: "style-loader"},
-          {loader: "css-loader"},
-          {loader: "sass-loader"}
-        ]
+        use: ExtractTextPlugin.extract({
+          use: [
+            'css-loader?sourceMap',
+            `sass-loader?sourceMapContents=true`,
+            'postcss-loader'
+          ]
+        })
+      },
+      {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
   },

@@ -1,0 +1,21 @@
+.App {
+  margin: -5rem auto 0;
+  width: 70%;
+
+  &--header {
+    background-color: #e9ebee;
+  }
+
+  &--profileImage-circle {
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 100px;
+    left: 40px;
+    position: relative;
+    width: 15rem;
+  }
+
+  &--title {
+    padding-left: 22rem;
+  }
+}
