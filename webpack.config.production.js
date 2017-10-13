@@ -2,14 +2,13 @@ const webpack = require('webpack');
 const path = require('path');
 const resolve = require('path').resolve
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './index',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/dist/'
   },
   devtool: 'source-map',
   plugins: [
@@ -23,13 +22,7 @@ module.exports = {
         warnings: false
       }
     }),
-    new ExtractTextPlugin('style.css'),
-    new CopyWebpackPlugin([
-      {
-        from: path.join(__dirname, 'assets/**/*'),
-        to: path.join(__dirname, 'dist')
-      }
-    ])
+    new ExtractTextPlugin('style.css')
   ],
   module: {
     rules: [
