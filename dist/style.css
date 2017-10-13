@@ -6,11 +6,48 @@
 
 .Footer--social-media-icons {
   padding-right: 3rem; }
+.BasePanel--children {
+  padding: 2rem 5rem; }
+.TimeLine {
+  position: relative; }
+  .TimeLine::after {
+    background-color: black;
+    bottom: 0;
+    content: '';
+    margin-left: -3px;
+    position: absolute;
+    top: 0;
+    width: 6px; }
+  .TimeLine--dates {
+    font-weight: bold;
+    padding-right: 2rem; }
+  .TimeLine--fact {
+    background-color: inherit;
+    padding: 10px 40px;
+    position: relative;
+    width: 50%; }
+    .TimeLine--fact::after {
+      background-color: white;
+      border-radius: 50%;
+      border: 4px solid #FF9F55;
+      content: '';
+      height: 25px;
+      left: -13px;
+      position: absolute;
+      top: 15px;
+      width: 25px;
+      z-index: 1; }
+  .TimeLine--divider {
+    border-radius: 50%;
+    border: 1.5rem solid orange;
+    height: 4rem;
+    margin: 0 3rem;
+    padding: 0rem;
+    width: 4rem; }
 .Body {
-  background-color: white;
-  border: 2px solid black; }
+  background-color: white; }
   .Body--container {
-    padding: 1rem; }
+    padding: 5rem; }
 .App {
   margin: -5rem auto 0;
   width: 70%; }
