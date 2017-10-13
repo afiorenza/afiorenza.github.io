@@ -1,9 +1,11 @@
+require('./_panel.scss');
+
 import React, {PropTypes} from 'react';
 
-export let BasePanel = ({title, children}) =>
-  <div>
+export let BasePanel = ({className, title, children}) =>
+  <div className={className}>
     <h2>{title}</h2>
-    <p>{children}</p>
+    <div className="BasePanel--children">{children}</div>
   </div>
 
 BasePanel.propTypes = {
