@@ -8,9 +8,6 @@ import moment from 'moment';
 export let isLastFact = (index, facts) => index === facts.length -1;
 export let isSameYear = (from, to) => moment(from).format('YYYY') === moment(to).format('YYYY');
 
-
-export let Connector = () => <div className="TimeLine--connector"></div>
-
 export let TimeLine = ({facts}) =>
   <div className="TimeLine">
     {
@@ -23,9 +20,9 @@ export let TimeLine = ({facts}) =>
               {!isSameYear(from, to) && <span> - {moment(to).format('YYYY')}</span>}
             </h3>
 
-            <p className="TimeLine--description">{fact}</p>
-            <p className="TimeLine--description">{institution}</p>
-            <p className="TimeLine--description">{description}</p>
+            {fact && <p className="TimeLine--description">{fact}</p>}
+            {institution && <p className="TimeLine--description">{institution}</p>}
+            {description && <p className="TimeLine--description">{description}</p>}
           </div>
         </div>
       )
