@@ -1,6 +1,7 @@
 require('./_time-line.scss');
 
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moment from 'moment';
 
@@ -13,16 +14,18 @@ export let Connector = () => <div className="TimeLine--connector"></div>
 export let TimeLine = ({facts}) =>
   <div className="TimeLine">
     {
-      facts.map(({from, to, fact}, index) =>
+      facts.map(({from, to, fact, institution, description}, index) =>
         <div className="TimeLine--fact" key={index}>
 
           <div className="TimeLine--content">
-            <div className="TimeLine--dates">
+            <h3 className="TimeLine--dates">
               {moment(from).format('YYYY')}
               {!isSameYear(from, to) && <span> - {moment(to).format('YYYY')}</span>}
-            </div>
+            </h3>
 
             <p className="TimeLine--description">{fact}</p>
+            <p className="TimeLine--description">{institution}</p>
+            <p className="TimeLine--description">{description}</p>
           </div>
         </div>
       )

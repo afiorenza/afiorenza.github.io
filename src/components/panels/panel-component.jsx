@@ -1,6 +1,7 @@
 require('./_panel.scss');
 
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export let BasePanel = ({className, title, children}) =>
   <div className={className}>
@@ -9,7 +10,7 @@ export let BasePanel = ({className, title, children}) =>
   </div>
 
 BasePanel.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.any,
   title: PropTypes.string
 }
 

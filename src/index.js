@@ -6,9 +6,12 @@ import {Image} from 'react-bootstrap';
 
 export let App = () =>
   <div className="App">
-    <div className="App--header">
+    <div>
       <Image bsClass="App--profileImage" src="/assets/profile.png" circle/>
-      <h1 className="App--title">Agustín Fiorenza</h1>
+      <div className="App--contact">
+        <h1 className="App--title text-bold">Agustín Fiorenza</h1>
+        <p className="text-bold"><i className="fa fa-envelope-o" aria-hidden="true"></i> agustinfiorenza@gmail.com</p>
+      </div>
     </div>
     <Body />
   </div>

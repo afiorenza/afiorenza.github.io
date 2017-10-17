@@ -47,6 +47,7 @@ module.exports = {
   resolve: {
     alias: {
       'components': resolve(__dirname, 'src/components'),
+      'data': resolve(__dirname, 'src/data'),
       'views': resolve(__dirname, 'src/views')
     },
     extensions: ['*', '.js', '.jsx'],
