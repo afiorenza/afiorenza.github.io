@@ -1,0 +1,64 @@
+.SkillsGrid {
+  margin: 0 auto;
+  max-width: 80rem;
+
+  &--column {
+    background: no-repeat center center;
+    background-size: contain;
+    height: 16rem;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      opacity: 0.5;
+
+      & > .SkillsGrid--title {
+        visibility: visible;
+      }
+    }
+  }
+
+  &--title {
+    transition: visibility 0.5s ease-in-out;
+    visibility: hidden;
+  }
+
+  &--row {
+    margin-bottom: 2rem;
+  }
+
+  &--html5-logo {
+    background-image: url('/assets/html5.png');
+  }
+
+  &--js-logo {
+    background-image: url('/assets/js.png');
+  }
+
+  &--css3-logo {
+    background-image: url('/assets/css3.png');
+  }
+
+  &--nodejs-logo {
+    background-image: url('/assets/nodejs.png');
+  }
+
+  &--react-logo {
+    background-image: url('/assets/react.png');
+  }
+
+  &--redux-logo {
+    background-image: url('/assets/redux.png');
+  }
+
+  &--webpack-logo {
+    background-image: url('/assets/webpack.png');
+  }
+
+  &--npm-logo {
+    background-image: url('/assets/npm.png');
+  }
+
+  &--magicxpa-logo {
+    background-image: url('/assets/magicxpa.png');
+  }
+}

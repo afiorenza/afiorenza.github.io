@@ -6,6 +6,7 @@ import BasePanel from 'components/panels';
 import TimeLine from 'components/time-line';
 import facts from 'data/facts.json';
 import {CertificationsList} from 'components/lists';
+import {SkillsGrid} from 'components/grids';
 
 export let Body = () =>
   <div className="Body">
@@ -35,7 +36,9 @@ export let Body = () =>
       </BasePanel>
 
       <BasePanel title="Skills">
-        this is the intro
+        <div className="Body--skills-panel">
+          <SkillsGrid />
+        </div>
       </BasePanel>
     </div>
     <Footer />
