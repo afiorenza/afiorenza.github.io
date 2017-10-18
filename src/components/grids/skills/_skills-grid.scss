@@ -2,19 +2,8 @@
   margin: 0 auto;
   max-width: 80rem;
 
-  &--column {
-    background: no-repeat center center;
-    background-size: contain;
-    height: 16rem;
-    transition: opacity 0.5s ease;
-
-    &:hover {
-      opacity: 0.5;
-
-      & > .SkillsGrid--title {
-        visibility: visible;
-      }
-    }
+  &--row {
+    margin-bottom: 2rem;
   }
 
   &--title {
@@ -22,8 +11,29 @@
     visibility: hidden;
   }
 
-  &--row {
-    margin-bottom: 2rem;
+  &--logo {
+    background: no-repeat center center;
+    background-size: contain;
+    height: 16rem;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &--logo-link {
+    &:hover {
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+  }
+
+  &--logo-footer {
+    color: #333 !important;
+    font-weight: bold;
+    padding-top: 1rem;
+    text-align: center;
   }
 
   &--html5-logo {
@@ -56,6 +66,10 @@
 
   &--npm-logo {
     background-image: url('/assets/npm.png');
+  }
+
+  &--git-logo {
+    background-image: url('/assets/git.png');
   }
 
   &--magicxpa-logo {

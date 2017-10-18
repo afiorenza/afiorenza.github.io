@@ -1,3 +1,8 @@
 .SocialBadges {
-  font-size: 5rem !important;
+  color: #333 !important;
+  font-size: 3rem !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

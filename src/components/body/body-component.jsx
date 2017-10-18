@@ -1,6 +1,5 @@
 require('./_body.scss');
 
-import Footer from 'components/footer';
 import React from 'react';
 import BasePanel from 'components/panels';
 import TimeLine from 'components/time-line';
@@ -23,6 +22,10 @@ export let Body = () =>
         </div>
       </BasePanel>
 
+      <BasePanel title="Contact">
+        <TimeLine facts={facts.work} />
+      </BasePanel>
+
       <BasePanel title="Work">
         <TimeLine facts={facts.work} />
       </BasePanel>
@@ -41,7 +44,6 @@ export let Body = () =>
         </div>
       </BasePanel>
     </div>
-    <Footer />
   </div>
 
 export default Body;
