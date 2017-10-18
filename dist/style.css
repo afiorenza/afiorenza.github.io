@@ -45,6 +45,41 @@
     margin: 0 3rem;
     padding: 0rem;
     width: 4rem; }
+.SkillsGrid {
+  margin: 0 auto;
+  max-width: 80rem; }
+  .SkillsGrid--column {
+    background: no-repeat center center;
+    background-size: contain;
+    height: 16rem;
+    transition: opacity 0.5s ease; }
+    .SkillsGrid--column:hover {
+      opacity: 0.5; }
+      .SkillsGrid--column:hover > .SkillsGrid--title {
+        visibility: visible; }
+  .SkillsGrid--title {
+    transition: visibility 0.5s ease-in-out;
+    visibility: hidden; }
+  .SkillsGrid--row {
+    margin-bottom: 2rem; }
+  .SkillsGrid--html5-logo {
+    background-image: url("/assets/html5.png"); }
+  .SkillsGrid--js-logo {
+    background-image: url("/assets/js.png"); }
+  .SkillsGrid--css3-logo {
+    background-image: url("/assets/css3.png"); }
+  .SkillsGrid--nodejs-logo {
+    background-image: url("/assets/nodejs.png"); }
+  .SkillsGrid--react-logo {
+    background-image: url("/assets/react.png"); }
+  .SkillsGrid--redux-logo {
+    background-image: url("/assets/redux.png"); }
+  .SkillsGrid--webpack-logo {
+    background-image: url("/assets/webpack.png"); }
+  .SkillsGrid--npm-logo {
+    background-image: url("/assets/npm.png"); }
+  .SkillsGrid--magicxpa-logo {
+    background-image: url("/assets/magicxpa.png"); }
 .Body {
   background-color: white; }
   .Body--container {
