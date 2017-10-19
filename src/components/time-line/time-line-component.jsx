@@ -20,8 +20,8 @@ export let TimeLine = ({facts}) =>
               {!isSameYear(from, to) && <span> - {moment(to).format('YYYY')}</span>}
             </h3>
 
-            {fact && <p className="TimeLine--description">{fact}</p>}
-            {institution && <p className="TimeLine--description">{institution}</p>}
+            {fact && <span className="TimeLine--description">{fact}</span>}
+            {institution && <span className="TimeLine--description"> at {institution} </span>}
             {description && <p className="TimeLine--description">{description}</p>}
           </div>
         </div>

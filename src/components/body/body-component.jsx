@@ -22,10 +22,6 @@ export let Body = () =>
         </div>
       </BasePanel>
 
-      <BasePanel title="Contact">
-        <TimeLine facts={facts.work} />
-      </BasePanel>
-
       <BasePanel title="Work">
         <TimeLine facts={facts.work} />
       </BasePanel>

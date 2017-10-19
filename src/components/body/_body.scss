@@ -1,5 +1,7 @@
 .Body {
   background-color: white;
+  box-shadow: 3px 3px 6px #1a1a1a;
+  margin-bottom: 2rem;
 
   &--container {
     padding: 5rem;
@@ -11,6 +13,6 @@
   }
 
   &--skills-panel {
-    
+
   }
 }
