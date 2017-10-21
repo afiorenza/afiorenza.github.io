@@ -5,10 +5,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moment from 'moment';
 
-export let isLastFact = (index, facts) => index === facts.length -1;
 export let isSameYear = (from, to) => moment(from).format('YYYY') === moment(to).format('YYYY');
 
-export let TimeLine = ({facts}) =>
+export let TimeLine = ({facts, language}) =>
   <div className="TimeLine">
     {
       facts.map(({from, to, fact, institution, description}, index) =>
@@ -21,7 +20,7 @@ export let TimeLine = ({facts}) =>
             </h3>
 
             {fact && <span className="TimeLine--description">{fact}</span>}
-            {institution && <span className="TimeLine--description"> at {institution} </span>}
+            {institution && <span className="TimeLine--description"> {`${language.at}`} {institution} </span>}
             {description && <p className="TimeLine--description">{description}</p>}
           </div>
         </div>
@@ -30,6 +29,7 @@ export let TimeLine = ({facts}) =>
   </div>
 
 TimeLine.propTypes = {
+  language: PropTypes.object,
   facts: PropTypes.arrayOf(
     PropTypes.shape({
       from: PropTypes.string,

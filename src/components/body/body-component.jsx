@@ -1,45 +1,58 @@
 require('./_body.scss');
 
-import React from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import BasePanel from 'components/panels';
 import TimeLine from 'components/time-line';
-import facts from 'data/facts.json';
 import {CertificationsList} from 'components/lists';
 import {SkillsGrid} from 'components/grids';
 
-export let Body = () =>
-  <div className="Body">
-    <div className="Body--container">
-      <BasePanel title="Introduction">
-        <div className="Body--introduction-panel">
-          Currently, studying a degree in Bachelor of Computer and Systems and working as a Frontend developer under agile methodologies (Scrum and kamban).
-          <br />
-          Open to new challenges and goals in the IT world, I like to start new projects, learn and implement new
-          technologies and to develop quality products to the customer for this work, both working for a company and
-          personally.
-          <br />
-          I also love languages as well as working with people from different fields and / or cultures.
+export default class Body extends Component {
+
+  constructor (props) {
+    super(props);
+  }
+
+  render () {
+    let {
+      certifications,
+      education,
+      facts,
+      introduction,
+      panels,
+      work
+    } = this.props.language;
+
+    return (
+      <div className="Body">
+        <div className="Body--container">
+          <BasePanel title={panels.introduction}>
+            <div className="Body--introduction-panel" dangerouslySetInnerHTML={{__html: introduction}}></div>
+          </BasePanel>
+
+          <BasePanel title={panels.work}>
+            <TimeLine facts={work} language={this.props.language} />
+          </BasePanel>
+
+          <BasePanel className="Body--educationPanel" title={panels.education}>
+            <TimeLine facts={education} language={this.props.language} />
+          </BasePanel>
+
+          <BasePanel title={panels.certifications}>
+            <CertificationsList language={this.props.language} />
+          </BasePanel>
+
+          <BasePanel title={panels.skills}>
+            <div className="Body--skills-panel">
+              <SkillsGrid />
+            </div>
+          </BasePanel>
         </div>
-      </BasePanel>
+      </div>
+    );
+  }
+}
 
-      <BasePanel title="Work">
-        <TimeLine facts={facts.work} />
-      </BasePanel>
-
-      <BasePanel className="Body--educationPanel" title="Education">
-        <TimeLine facts={facts.education} />
-      </BasePanel>
-
-      <BasePanel title="Certifications">
-        <CertificationsList />
-      </BasePanel>
-
-      <BasePanel title="Skills">
-        <div className="Body--skills-panel">
-          <SkillsGrid />
-        </div>
-      </BasePanel>
-    </div>
-  </div>
-
-export default Body;
+Body.propTypes = {
+  language: PropTypes.object
+}

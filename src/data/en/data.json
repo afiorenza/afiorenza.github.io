@@ -1,0 +1,75 @@
+{
+  "introduction" : "Currently, studying a degree in Bachelor of Computer and Systems and working as a Frontend developer under agile methodologies (Scrum and kamban).<br />Open to new challenges and goals in the IT world, I like to start new projects, learn and implement new technologies and to develop quality products to the customer for this work, both working for a company and personally. <br /> I also love languages as well as working with people from different fields and / or cultures.",
+  "panels": {
+    "introduction": "Introduction",
+    "work": "Work",
+    "education": "Education",
+    "certifications": "Certifications",
+    "skills": "Skills"
+  },
+  "education": [
+    {
+      "from": "20110101",
+      "to": "20110101",
+      "fact": "Licenciatura en sistemas y computacion",
+      "institution": "Universidad Catolica Argentina"
+    },
+    {
+      "from": "20060101",
+      "to": "20101201",
+      "fact": "High School",
+      "institution": "Escuela de Enseñanza Media Nro. 438"
+    },
+    {
+      "from": "19990101",
+      "to": "20091201",
+      "fact": "English",
+      "institution": "CELT"
+    }
+  ],
+  "work": [
+    {
+      "from": "20170301",
+      "to": "20170301",
+      "fact": "Frontend Developer",
+      "institution": "ITWarp",
+      "description": "Currently i am working as a frontend developer for ISeatz as a contractor. It is my first freelance experience and working with other freelances is a challenge every day, but i really enjoy be part of it."
+    },
+    {
+      "from": "20150401",
+      "to": "20170201",
+      "fact": "Frontend Developer",
+      "institution": "Globant",
+      "description": "I was part of a team developing core components in React framework. The most interesting part of the project was that the page had to be WAI-ARIA compliant, so it was a big challenge."
+    },
+    {
+      "from": "20130601",
+      "to": "20150301",
+      "fact": "Magic XPA Developer",
+      "institution": "Generatica S.A.",
+      "description": "I was in charge of develop rich client applications with Magic XPA framework, both in desktop and mobile (Android)."
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Programacion Android",
+      "year": "July 2013",
+      "institution": "Instituto de Capacitación FAGDUT"
+    },
+    {
+      "title": "First Certificate Examination",
+      "award": "C",
+      "year": "December 2009",
+      "institution": "Cambridge"
+    },
+    {
+      "title": "Preliminary English Test",
+      "year": "November 2007",
+      "institution": "Cambridge"
+    }
+  ],
+  "institution": "Institution",
+  "award": "Award",
+  "year": "Year",
+  "at": "at"
+}
