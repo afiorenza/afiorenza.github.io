@@ -27,6 +27,7 @@ export default class Body extends Component {
     return (
       <div className="Body">
         <div className="Body--header">
+          <h1 className="text-bold">Agustín Fiorenza</h1>
           <Header />
         </div>
         <div className="Body--container">
