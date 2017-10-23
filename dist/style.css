@@ -113,6 +113,9 @@
   .Body--introduction-panel {
     margin-left: -3rem;
     text-indent: 1rem; }
+    @media only screen and (max-width: 768px) {
+      .Body--introduction-panel {
+        margin: 0; } }
 .App {
   margin: 0 auto;
   width: 80%; }
@@ -135,7 +138,7 @@
     @media only screen and (max-width: 768px) {
       .App--profileImage-circle {
         top: 40px;
-        left: 34%; } }
+        left: 35%; } }
 @charset "UTF-8";
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
