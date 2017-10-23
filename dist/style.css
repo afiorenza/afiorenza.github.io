@@ -56,6 +56,10 @@
 
 .Header--social-media-icons {
   padding-left: 1rem; }
+
+@media only screen and (max-width: 768px) {
+  .Header--social-media-wrapper {
+    display: block; } }
 .TimeLine {
   position: relative; }
   .TimeLine::after {
@@ -122,7 +126,7 @@
   @media only screen and (max-width: 768px) {
     .App--title, .App--header {
       display: none; } }
-  .App--languageBar {
+  .App--language-bar {
     float: right; }
   .App--languageButton {
     color: black !important; }
@@ -138,7 +142,12 @@
     @media only screen and (max-width: 768px) {
       .App--profileImage-circle {
         top: 40px;
-        left: 35%; } }
+        left: 0; } }
+  @media only screen and (max-width: 768px) {
+    .App--header-container {
+      text-align: center;
+      display: inline-block;
+      width: 100%; } }
 @charset "UTF-8";
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
