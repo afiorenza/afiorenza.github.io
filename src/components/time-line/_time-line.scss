@@ -1,6 +1,8 @@
 .TimeLine {
   position: relative;
 
+
+
   &::after {
     background-color: black;
     bottom: 0;
@@ -22,6 +24,10 @@
     padding: 10px 40px;
     position: relative;
     width: 80%;
+
+    @media only screen and (max-width: 768px) {
+      width: auto;
+    }
 
     &::after {
       background-color: white;

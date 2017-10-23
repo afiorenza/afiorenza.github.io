@@ -3,6 +3,17 @@
   box-shadow: 3px 3px 6px #1a1a1a;
   margin-bottom: 2rem;
 
+  &--header {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+      position: relative;
+      text-align: center;
+      top: 5rem;
+    }
+  }
+
   &--container {
     padding: 5rem;
   }
@@ -10,9 +21,5 @@
   &--introduction-panel {
     margin-left: -3rem;
     text-indent: 1rem;
-  }
-
-  &--skills-panel {
-
   }
 }

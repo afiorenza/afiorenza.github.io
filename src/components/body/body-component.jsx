@@ -1,11 +1,12 @@
 require('./_body.scss');
 
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import BasePanel from 'components/panels';
-import TimeLine from 'components/time-line';
 import {CertificationsList} from 'components/lists';
 import {SkillsGrid} from 'components/grids';
+import BasePanel from 'components/panels';
+import Header from 'components/headers';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import TimeLine from 'components/time-line';
 
 export default class Body extends Component {
 
@@ -25,6 +26,9 @@ export default class Body extends Component {
 
     return (
       <div className="Body">
+        <div className="Body--header">
+          <Header />
+        </div>
         <div className="Body--container">
           <BasePanel title={panels.introduction}>
             <div className="Body--introduction-panel" dangerouslySetInnerHTML={{__html: introduction}}></div>
