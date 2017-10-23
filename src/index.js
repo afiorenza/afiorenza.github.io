@@ -32,11 +32,11 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <ButtonToolbar bsClass="App--languageBar">
+        <ButtonToolbar bsClass="App--language-bar">
           <Button onClick={() => this.handleLanguageButtonClick(ENGLISH)} bsClass="btn btn-link App--languageButton" bsStyle="link">English</Button>
           <Button onClick={() => this.handleLanguageButtonClick(SPANISH)} bsClass="btn btn-link App--languageButton" bsStyle="link">Spanish</Button>
         </ButtonToolbar>
-        <div>
+        <div className="App--header-container">
           <Image bsClass="App--profileImage" src="/assets/profile.png" circle/>
           <div className="App--contact">
             <h1 className="App--title text-bold">Agustín Fiorenza</h1>

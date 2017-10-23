@@ -7,4 +7,11 @@
   &--social-media-icons {
     padding-left: 1rem;
   }
+
+  &--social-media-wrapper {
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+  }
 }

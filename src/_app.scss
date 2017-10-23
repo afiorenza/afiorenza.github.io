@@ -9,7 +9,7 @@
     }
   }
 
-  &--languageBar {
+  &--language-bar {
     float: right;
   }
 
@@ -31,7 +31,16 @@
 
     @media only screen and (max-width: 768px) {
       top: 40px;
-      left: 35%;
+      left: 0;
+    }
+  }
+
+  &--header-container {
+
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+      display: inline-block;
+      width: 100%;
     }
   }
 }
