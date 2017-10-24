@@ -16,12 +16,12 @@ export let TimeLine = ({facts, language}) =>
           <div className="TimeLine--content">
             <h3 className="TimeLine--dates">
               {moment(from).format('YYYY')}
-              {!isSameYear(from, to) && <span> - {moment(to).format('YYYY')}</span>}
+              {isSameYear(from, to) ? <span> - {language.present}</span> : <span> - {moment(to).format('YYYY')}</span>}
             </h3>
 
             {fact && <span className="TimeLine--description">{fact}</span>}
-            {institution && <span className="TimeLine--description"> {`${language.at}`} {institution} </span>}
-            {description && <p className="TimeLine--description">{description}</p>}
+            {institution && <span className="TimeLine--description" dangerouslySetInnerHTML={{__html: ` ${language.at} ${institution}`}}></span>}
+            {description && <p className="TimeLine--description" dangerouslySetInnerHTML={{__html: description}}></p>}
           </div>
         </div>
       )

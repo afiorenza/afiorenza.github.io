@@ -20,6 +20,7 @@ export default class Body extends Component {
       education,
       facts,
       introduction,
+      name,
       panels,
       work
     } = this.props.language;
@@ -27,7 +28,7 @@ export default class Body extends Component {
     return (
       <div className="Body">
         <div className="Body--header">
-          <h1 className="text-bold">Agustín Fiorenza</h1>
+          <h1 className="text-bold">{name}</h1>
           <Header />
         </div>
         <div className="Body--container">

@@ -1,3 +1,5 @@
+@import "../../../../_index.scss";
+
 .SkillsGrid {
   margin: 0 auto;
   max-width: 80rem;
@@ -30,7 +32,7 @@
   }
 
   &--logo-footer {
-    color: #333 !important;
+    color: $font-color !important;
     font-weight: bold;
     padding-top: 1rem;
     text-align: center;

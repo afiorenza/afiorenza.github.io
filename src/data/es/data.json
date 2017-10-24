@@ -1,4 +1,5 @@
 {
+  "name": "Agustín Fiorenza",
   "introduction" : "Currently, studying a degree in Bachelor of Computer and Systems and working as a Frontend developer under agile methodologies (Scrum and kamban).<br />Open to new challenges and goals in the IT world, I like to start new projects, learn and implement new technologies and to develop quality products to the customer for this work, both working for a company and personally. <br /> I also love languages as well as working with people from different fields and / or cultures.",
   "panels": {
     "introduction": "Introducción",
@@ -17,13 +18,13 @@
     {
       "from": "20060101",
       "to": "20101201",
-      "fact": "High School",
+      "fact": "Escuela secundaria",
       "institution": "Escuela de Enseñanza Media Nro. 438"
     },
     {
       "from": "19990101",
       "to": "20091201",
-      "fact": "English",
+      "fact": "Ingles",
       "institution": "CELT"
     }
   ],
@@ -41,6 +42,13 @@
       "fact": "Frontend Developer",
       "institution": "Globant",
       "description": "I was part of a team developing core components in React framework. The most interesting part of the project was that the page had to be WAI-ARIA compliant, so it was a big challenge."
+    },
+    {
+      "from": "20150101",
+      "to": "20150101",
+      "fact": "Magic XPA Developer",
+      "institution": "<a href='http://www.sigepo.com.ar/' target='_blank'>SiGePo</a>",
+      "description": "Encargado del desarrollo del sistema de gestión de puertos en Magic XPA. Diseño de base de datos SQL y componentes reutilizables en Magic XPA."
     },
     {
       "from": "20130601",
@@ -71,5 +79,6 @@
   "institution": "Institución",
   "award": "Calificación",
   "year": "Año",
-  "at" : "en"
+  "at" : "en",
+  "present": "Presente"
 }
