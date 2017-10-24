@@ -23,6 +23,11 @@ export default class App extends Component {
     };
   }
 
+  componentWillMount () {
+    if (window.navigator.language === 'es')
+      this.setState({language: LANGUAGES[SPANISH]});
+  }
+
   handleLanguageButtonClick (language) {
     this.setState({
       language: LANGUAGES[language]

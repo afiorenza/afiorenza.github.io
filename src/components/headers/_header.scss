@@ -1,17 +1,14 @@
 .Header {
 
   &--email {
-    vertical-align: text-bottom;
+    font-size: 2.5rem !important;
   }
 
   &--social-media-icons {
     padding-left: 1rem;
   }
 
-  &--social-media-wrapper {
-
-    @media only screen and (max-width: 768px) {
-      display: block;
-    }
+  @media only screen and (max-width: 768px) {
+    display: block;
   }
 }

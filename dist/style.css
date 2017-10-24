@@ -4756,13 +4756,13 @@ body {
   .SocialBadges:hover {
     opacity: 0.8; }
 .Header--email {
-  vertical-align: text-bottom; }
+  font-size: 2.5rem !important; }
 
 .Header--social-media-icons {
   padding-left: 1rem; }
 
 @media only screen and (max-width: 768px) {
-  .Header--social-media-wrapper {
+  .Header {
     display: block; } }
 .TimeLine {
   position: relative; }
