@@ -4814,13 +4814,23 @@ body {
         text-align: center;
         top: 5rem; } }
   .Body--container {
-    padding: 5rem; }
+    padding: 5rem;
+    padding-bottom: 0; }
+    @media only screen and (max-width: 768px) {
+      .Body--container {
+        padding: 2rem;
+        padding-bottom: 0; } }
   .Body--introduction-panel {
     margin-left: -3rem;
     text-indent: 1rem; }
     @media only screen and (max-width: 768px) {
       .Body--introduction-panel {
         margin: 0; } }
+  .Body--map-panel {
+    margin: -2rem -10rem; }
+    @media only screen and (max-width: 768px) {
+      .Body--map-panel {
+        margin: -2rem -2rem; } }
 .App {
   margin: 0 auto;
   width: 80%; }
