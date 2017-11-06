@@ -16,6 +16,12 @@
 
   &--container {
     padding: 5rem;
+    padding-bottom: 0;
+
+    @media only screen and (max-width: 768px) {
+      padding: 2rem;
+      padding-bottom: 0;
+    }
   }
 
   &--introduction-panel {
@@ -24,6 +30,14 @@
 
     @media only screen and (max-width: 768px) {
       margin: 0;
+    }
+  }
+
+  &--map-panel {
+    margin: -2rem -10rem;
+
+    @media only screen and (max-width: 768px) {
+      margin: -2rem -2rem;
     }
   }
 }

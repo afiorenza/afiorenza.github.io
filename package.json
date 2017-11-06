@@ -32,7 +32,9 @@
     "prop-types": "^15.6.0",
     "react": "^15.4.1",
     "react-bootstrap": "^0.31.3",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-google-maps": "^9.2.2",
+    "recompose": "^0.26.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

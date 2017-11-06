@@ -36,6 +36,7 @@ export default class App extends Component {
           <Button onClick={() => this.handleLanguageButtonClick(ENGLISH)} bsClass="btn btn-link App--languageButton" bsStyle="link">English</Button>
           <Button onClick={() => this.handleLanguageButtonClick(SPANISH)} bsClass="btn btn-link App--languageButton" bsStyle="link">Spanish</Button>
         </ButtonToolbar>
+
         <div className="App--header-container">
           <Image bsClass="App--profileImage" src="/assets/profile.png" circle />
           <div className="App--contact">
@@ -45,6 +46,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
+
         <Body language={this.state.language} />
       </div>
     );
