@@ -1,6 +1,6 @@
 {
   "name": "Agustín Fiorenza",
-  "introduction" : "Currently, studying a degree in Bachelor of Computer and Systems and working as a Frontend developer under agile methodologies (Scrum and kamban).<br />Open to new challenges and goals in the IT world, I like to start new projects, learn and implement new technologies and to develop quality products to the customer for this work, both working for a company and personally. <br /> I also love languages as well as working with people from different fields and / or cultures.",
+  "introduction" : "Bachelor of Systems and Computing. Currently working as frontend developer for Iseatz as a freelancer. Also collaborating in projects in solidity and web3js, developing both the backend and the frontend and also smart-contracts.",
   "panels": {
     "introduction": "Introduction",
     "work": "Work",
@@ -11,7 +11,7 @@
   "education": [
     {
       "from": "20110101",
-      "to": "20110101",
+      "to": "20171201",
       "fact": "Licenciatura en sistemas y computacion",
       "institution": "Universidad Catolica Argentina"
     },

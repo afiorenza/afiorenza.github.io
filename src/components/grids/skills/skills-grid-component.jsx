@@ -75,6 +75,18 @@ export let SkillsGrid = () =>
           <p className="SkillsGrid--logo-footer">Magic XPA</p>
         </a>
       </Col>
+      <Col md={4} className="show-grid SkillsGrid--column">
+        <a className="SkillsGrid--logo-link" target="_blank" href="https://www.ethereum.org/">
+          <div className="SkillsGrid--logo SkillsGrid--ethereum-logo"></div>
+          <p className="SkillsGrid--logo-footer">Ethereum</p>
+        </a>
+      </Col>
+      <Col md={4} className="show-grid SkillsGrid--column">
+        <a className="SkillsGrid--logo-link" target="_blank" href="http://solidity.readthedocs.io/en/develop/">
+          <div className="SkillsGrid--logo SkillsGrid--solidity-logo"></div>
+          <p className="SkillsGrid--logo-footer">Solidity</p>
+        </a>
+      </Col>
     </Row>
   </Grid>
 

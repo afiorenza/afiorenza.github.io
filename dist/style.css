@@ -2393,6 +2393,10 @@ body {
     background-image: url("/assets/git.png"); }
   .SkillsGrid--magicxpa-logo {
     background-image: url("/assets/magicxpa.png"); }
+  .SkillsGrid--solidity-logo {
+    background-image: url("/assets/solidity.png"); }
+  .SkillsGrid--ethereum-logo {
+    background-image: url("/assets/ethereum.png"); }
 .BasePanel--children {
   padding: 2rem 5rem; }
   @media only screen and (max-width: 768px) {
