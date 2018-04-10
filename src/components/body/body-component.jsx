@@ -1,6 +1,6 @@
 require('./_body.scss');
 
-import {CertificationsList} from 'components/lists';
+import {CertificationsList, ProjectsList} from 'components/lists';
 import {SkillsGrid} from 'components/grids';
 import BasePanel from 'components/panels';
 import Header from 'components/headers';
@@ -38,6 +38,10 @@ export default class Body extends Component {
 
           <BasePanel title={panels.work}>
             <TimeLine facts={work} language={this.props.language} />
+          </BasePanel>
+
+          <BasePanel title={panels.projects}>
+            <ProjectsList facts={work} language={this.props.language} />
           </BasePanel>
 
           <BasePanel className="Body--educationPanel" title={panels.education}>

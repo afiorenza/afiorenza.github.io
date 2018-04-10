@@ -6,7 +6,8 @@
     "work": "Experiencia Laboral",
     "education": "Educación",
     "certifications": "Cursos",
-    "skills": "Habilidades"
+    "skills": "Habilidades",
+    "projects": "Projectos"
   },
   "education": [
     {
@@ -56,6 +57,18 @@
       "fact": "Magic XPA Developer",
       "institution": "Generatica S.A.",
       "description": "I was in charge of develop rich client applications with Magic XPA framework, both in desktop and mobile (Android)."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Sandrigo SRL",
+      "url": "http://www.sandrigo.com.ar",
+      "description": "Pagina web institucional de Sandrigo SRL, el cual es taller electromecanico. Se desarrollo la landing page, catalogo de productos y formulario de contacto."
+    },
+    {
+      "title": "react-eth",
+      "url": "https://www.npmjs.com/package/react-eth",
+      "description": "Libreria NPM en progreso. Orientada a desarrolladores que esten trabajando con smart contracts en solidity y deseen generar formularios a partir del ABI."
     }
   ],
   "certifications": [
