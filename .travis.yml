@@ -1,10 +1,12 @@
 language: node_js
+os:
+  - linux
 node_js:
   - "stable"
 cache:
   directories:
     - node_modules
-scripts:
+script:
   - yarn build
 deploy:
   local_dir: dist

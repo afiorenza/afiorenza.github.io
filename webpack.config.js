@@ -1,57 +1,41 @@
-const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
-const resolve = require('path').resolve
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const paths = {
+  entry: path.resolve(__dirname, 'src/index.jsx'),
+  html: path.resolve(__dirname, 'src/index.html'),
+  public: path.resolve(__dirname, 'dist')
+}
 
 module.exports = {
-  entry: './index',
+  mode: 'development',
+  entry: paths.entry,
   output: {
-    path: __dirname,
     filename: 'bundle.js',
-    publicPath: '/dist/'
+    path: paths.public
   },
-  devtool: 'inline-source-map',
-  plugins: [
-    new webpack.NoEmitOnErrorsPlugin(),
-    new ExtractTextPlugin('style.css')
-  ],
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loaders: "babel-loader",
-        include: __dirname,
-        query: {
-          presets: ['es2015', 'react', 'react-hmre']
-        }
-      },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            'css-loader?sourceMap',
-            `sass-loader?sourceMapContents=true`,
-            'postcss-loader'
-          ]
-        })
-      },
-      {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader'
+        use: ['babel-loader']
       }
     ]
   },
-  resolve: {
-    alias: {
-      'components': resolve(__dirname, 'src/components'),
-      'data': resolve(__dirname, 'src/data'),
-      'views': resolve(__dirname, 'src/views')
-    },
-    extensions: ['*', '.js', '.jsx'],
-    modules: [
-      'src',
-      'node_modules'
-    ]
+  plugins: [
+    new CopyPlugin([
+      {
+        from: paths.html,
+        to: paths.public
+      }
+    ]),
+  ],
+  devServer: {
+    contentBase: paths.public,
+    port: 8080
   }
 };
