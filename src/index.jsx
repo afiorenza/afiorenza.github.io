@@ -1,6 +1,9 @@
 import './styles/index.scss'
-import React, { Component } from 'react';
 import { render } from 'react-dom';
+import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize(process.env.GA_CODE);
 
 class App extends Component {
 
