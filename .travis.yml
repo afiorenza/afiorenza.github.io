@@ -8,13 +8,13 @@ cache:
     - node_modules
 script:
   - yarn build
-deploy:
-  keep_history: true
-  local_dir: dist
-  provider: pages
-  repo: afiorenza/afiorenza.github.io
-  skip_cleanup: true
-  target-branch: master
-  token: $GITHUB_TOKEN
-  on:
-    branch: master
+# deploy:
+#   keep_history: false
+#   local_dir: dist
+#   provider: pages
+#   repo: afiorenza/afiorenza.github.io
+#   skip_cleanup: true
+#   target-branch: master
+#   token: $GITHUB_TOKEN
+#   on:
+#     branch: master
