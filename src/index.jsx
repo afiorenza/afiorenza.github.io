@@ -4,13 +4,14 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 
 ReactGA.initialize(process.env.GA_CODE);
+ReactGA.pageview('/');
 
 class App extends Component {
 
   render() {
     return (
       <div>
-        In progressss
+        In progressss weiiii
       </div>
     )
   }
