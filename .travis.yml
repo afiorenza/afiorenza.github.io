@@ -13,6 +13,8 @@ deploy:
   keep_history: true
   local_dir: dist
   provider: pages
+  repo: afiorenza.github.io
+  target-branch: master
   token: $GITHUB_TOKEN
   on:
     branch: master
