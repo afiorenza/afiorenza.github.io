@@ -2,16 +2,17 @@ language: node_js
 os:
   - linux
 node_js:
-  - "stable"
+  - stable
 cache:
   directories:
     - node_modules
 script:
   - yarn build
 deploy:
+  edge: true
+  keep_history: true
   local_dir: dist
   provider: pages
   token: $GITHUB_TOKEN
-  keep_history: true
   on:
     branch: master
