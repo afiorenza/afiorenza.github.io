@@ -11,7 +11,28 @@ const paths = {
 }
 
 const configurations = {
-  base: {
+  development: {
+    devServer: {
+      publicPath: '/dist/',
+      hot: true,
+      inline: true,
+      port: 8080,
+      progress: true
+    }
+  },
+  production: {
+    plugins: [new MiniCssExtractPlugin({
+      filename: 'style.css'
+    })],
+    optimization: {
+      minimize: true,
+      minimizer: [new TerserPlugin()]
+    }
+  }
+};
+
+const getBaseConfiguration = (isDevelopment) => {
+  return {
     entry: paths.entry,
     output: {
       filename: 'bundle.js',
@@ -28,55 +49,35 @@ const configurations = {
           use: ['babel-loader']
         },
         {
-          test: /\.scss$/i,
+          test: /\.(scss|css)$/i,
           use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader'
-          ],
+            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: isDevelopment
+              }
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: isDevelopment
+              }
+            }
+          ]
         }
       ]
     },
     plugins: [
       new Dotenv()
     ]
-  },
-  development: {
-    devServer: {
-      publicPath: '/dist/',
-      hot: true,
-      inline: true,
-      open: true,
-      port: 8080,
-      progress: true
-    }
-  },
-  production: {
-    plugins: [new MiniCssExtractPlugin({
-      filename: 'style.css'
-    })],
-    optimization: {
-      minimize: true,
-      minimizer: [new TerserPlugin()]
-    },
-    module: {
-      rules: [
-        {
-          test: /\.scss$/i,
-          use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader',
-            'sass-loader'
-          ]
-        }
-      ]
-    }
   }
 };
 
 module.exports = (env, { mode }) => {
   const isDevelopment = mode === 'development';
+  const baseConfiguration = getBaseConfiguration(isDevelopment);
   const extraConfiguration = isDevelopment ? configurations.development : configurations.production;
 
-  return merge(configurations.base, extraConfiguration);
+  return merge(baseConfiguration, extraConfiguration);
  };
