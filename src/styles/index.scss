@@ -1,1 +1,9 @@
+// Structural
+@import 'structural/_colors.scss';
 @import 'structural/_reset.scss';
+
+// Screens
+@import 'screens/home';
+
+// Components
+@import 'components/_header.scss';

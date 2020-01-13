@@ -1,0 +1,11 @@
+.header {
+  height: 64px;
+  position: fixed;
+  width: 100%;
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    line-height: 64px !important;
+  }
+}

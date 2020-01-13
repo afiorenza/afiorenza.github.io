@@ -1,22 +1,53 @@
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons';
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
+import AboutMe from '~components/about-me';
+import Contact from '~components/contact';
+import Header from '~components/header';
 import React, { Component } from 'react';
+import Stack from '~components/stack';
+
+const layers = [
+  AboutMe,
+  Stack,
+  Contact
+];
 
 export default class Home extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.parallaxRef = React.createRef();
+  }
+
+  renderLayer(Child, index) {
+    return (
+      <ParallaxLayer
+        offset={ index }
+        speed={ 0.5 }
+      >
+        <Child />
+      </ParallaxLayer>
+    );
+  }
+
+  renderLayers() {
+    return layers.map(this.renderLayer);
+  }
+
   render() {
     return (
-      <Parallax pages={3} ref={ref => (this.parallax = ref)}>
-        <ParallaxLayer offset={0} speed={0.5}>
-          <span onClick={() => this.parallax.scrollTo(1)}>Layers can contain anything</span>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.5}>
-          <span onClick={() => this.parallax.scrollTo(2)}>Layers can contain anything 2</span>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={2} speed={0.5}>
-          <span onClick={() => this.parallax.scrollTo(0)}>Layers can contain anything 3</span>
-        </ParallaxLayer>
-      </Parallax>
-    )
+      <div className='home'>
+        <Header
+          parallaxRef={ this.parallaxRef }
+        />
+        <Parallax
+          className='home__body'
+          pages={ layers.length }
+          ref={ this.parallaxRef }
+        >
+          { this.renderLayers() }
+        </Parallax>
+      </div>
+    );
   }
 }
