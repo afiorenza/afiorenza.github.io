@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode=development",
-    "build": "webpack --config webpack.config.js --mode=production",
-    "deploy": "rm -rf dist && npm run build"
+    "build": "webpack --config webpack.config.js --mode=production"
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn deploy"
+      "pre-push": "./build.sh"
     }
   },
   "repository": {
