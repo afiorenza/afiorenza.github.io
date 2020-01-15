@@ -1,14 +1,26 @@
-import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import AboutMe from '~components/about-me';
 import Contact from '~components/contact';
 import Header from '~components/header';
 import React, { Component } from 'react';
+import Section from '~components/section';
 import Stack from '~components/stack';
 
 const layers = [
-  AboutMe,
-  Stack,
-  Contact
+  {
+    Child: AboutMe,
+    href: '#about-me',
+    title: 'About me'
+  },
+  {
+    Child: Stack,
+    href: '#stack',
+    title: 'Stack'
+  },
+  {
+    Child: Contact,
+    href: '#contact',
+    title: 'Contact'
+  }
 ];
 
 export default class Home extends Component {
@@ -19,14 +31,15 @@ export default class Home extends Component {
     this.parallaxRef = React.createRef();
   }
 
-  renderLayer(Child, index) {
+  renderLayer(layer, index) {
+    const { Child, href } = layer;
+
     return (
-      <ParallaxLayer
-        offset={ index }
-        speed={ 0.5 }
-      >
-        <Child />
-      </ParallaxLayer>
+      <Section
+        Child={ Child }
+        key={ `section-${index}` }
+        href={ href }
+      />
     );
   }
 
@@ -37,16 +50,10 @@ export default class Home extends Component {
   render() {
     return (
       <div className='home'>
-        <Header
-          parallaxRef={ this.parallaxRef }
-        />
-        <Parallax
-          className='home__body'
-          pages={ layers.length }
-          ref={ this.parallaxRef }
-        >
+        <Header layers={ layers } />
+        <div className='home__body'>
           { this.renderLayers() }
-        </Parallax>
+        </div>
       </div>
     );
   }

@@ -1,0 +1,15 @@
+.section {
+  height: 100vh;
+
+  &:first-of-type {
+    height: calc(100vh - 64px);
+  }
+
+  & > div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+}

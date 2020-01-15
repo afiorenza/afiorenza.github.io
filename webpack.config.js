@@ -7,7 +7,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const paths = {
   entry: path.resolve(__dirname, 'src/index.jsx'),
   html: path.resolve(__dirname, 'index.html'),
-  public: path.resolve(__dirname, 'dist/')
+  public: path.resolve(__dirname, 'dist/'),
+  src: path.resolve(__dirname, 'src')
 }
 
 const configurations = {

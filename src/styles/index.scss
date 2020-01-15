@@ -1,9 +1,14 @@
 // Structural
 @import 'structural/_colors.scss';
+@import 'structural/_global.scss';
 @import 'structural/_reset.scss';
 
 // Screens
-@import 'screens/home';
+@import 'src/screens/home/_home.scss';
 
 // Components
-@import 'components/_header.scss';
+@import 'src/components/about-me/_about-me.scss';
+@import 'src/components/contact/_contact.scss';
+@import 'src/components/header/_header.scss';
+@import 'src/components/section/_section.scss';
+@import 'src/components/stack/_stack.scss';

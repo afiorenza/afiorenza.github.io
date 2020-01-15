@@ -1,42 +1,22 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { Layout, Menu } from 'antd';
 
 export default class Header extends Component {
 
-  static propTypes = {
-    parallaxRef: PropTypes.shape({
-      current: PropTypes.elementType
-    })
-  }
-
-  renderMenuItem = ({ title }, index) => {
-    const { parallaxRef } = this.props;
-
+  renderMenuItem = ({ href, title }, index) => {
     return (
-      <Menu.Item
-        key={ index }
-        onClick={ () => parallaxRef.current.scrollTo(index) }
-      >
-        { title }
+      <Menu.Item key={ `menuitem-${index}`  }>
+        <a href={ href }>
+          { title }
+        </a>
       </Menu.Item>
     );
   }
 
   renderMenuItems() {
-    const items = [
-      {
-        title: 'About me'
-      },
-      {
-        title: 'Stack'
-      },
-      {
-        title: 'Contact'
-      }
-    ];
+    const { layers } = this.props;
 
-    return items.map(this.renderMenuItem);
+    return layers.map(this.renderMenuItem);
   }
 
   renderMenu() {
