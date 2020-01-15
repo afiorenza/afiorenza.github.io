@@ -4,15 +4,6 @@ import { scroller } from 'react-scroll';
 
 export default class Header extends Component {
 
-  handleMenuItemClick = ({ key }) => {
-    const options = {
-      offset: -64,
-      smooth: true
-    };
-
-    scroller.scrollTo(key, options);
-  }
-
   renderMenuItem = ({ name, title }) => {
     return (
       <Menu.Item
@@ -51,5 +42,15 @@ export default class Header extends Component {
         </Layout.Header>
       </div>
     )
+  }
+
+  handleMenuItemClick = ({ key }) => {
+    const options = {
+      duration: 1000,
+      offset: -64,
+      smooth: true
+    };
+
+    scroller.scrollTo(key, options);
   }
 }

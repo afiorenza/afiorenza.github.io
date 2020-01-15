@@ -1,4 +1,17 @@
 .about-me {
   background-color: green;
   text-align: center;
+
+  &__icons {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.5rem;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+    width: 30rem;
+  }
+
+  &__link {
+    color: rgb(33, 37, 41);;
+  }
 }

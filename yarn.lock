@@ -879,6 +879,23 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@iconify/icons-fa-brands@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-fa-brands/-/icons-fa-brands-1.0.9.tgz#0cb17f173805c6d5ec8a5d2c1658014052496447"
+  integrity sha512-escy9pP5dqmqW3fHTNbhFkWbN3TeixUySo2zTCXN0f4S3PuMBR7EEo4aHG9A+jlk3dK6dhInpfuVt8ayVae52Q==
+
+"@iconify/icons-jam@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-jam/-/icons-jam-1.0.3.tgz#4a2bd6612415c4adf7b2951911f183cf8d0057ab"
+  integrity sha512-fFMzeZStNtg5jS9rcOylNcuAIpjk4cEiwlVNyhXNslaJXcYif/d1uPWPsJuM+0XfgXrvrsSrru72XDFgwRmujw==
+
+"@iconify/react@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify/react/-/react-1.1.1.tgz#38526508f722e0b617723d79209bb1e6d8c59c61"
+  integrity sha512-BRbPW/vkyWi6n2dHx4O8Cp0RKeI4KsxieLZ+UcyknCkk1IVxii5IassCIKHJ3jWB6s6uLAWq5EnHJniI7er9+w==
+  dependencies:
+    react "^16.8.3"
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -5597,7 +5614,7 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react@^16.12.0:
+react@^16.12.0, react@^16.8.3:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
