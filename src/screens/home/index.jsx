@@ -8,17 +8,17 @@ import Stack from '~components/stack';
 const layers = [
   {
     Child: AboutMe,
-    href: '#about-me',
+    name: 'about-me',
     title: 'About me'
   },
   {
     Child: Stack,
-    href: '#stack',
+    name: 'stack',
     title: 'Stack'
   },
   {
     Child: Contact,
-    href: '#contact',
+    name: 'contact',
     title: 'Contact'
   }
 ];
@@ -32,13 +32,13 @@ export default class Home extends Component {
   }
 
   renderLayer(layer, index) {
-    const { Child, href } = layer;
+    const { Child, name } = layer;
 
     return (
       <Section
         Child={ Child }
         key={ `section-${index}` }
-        href={ href }
+        name={ name }
       />
     );
   }

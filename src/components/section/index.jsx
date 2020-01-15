@@ -1,14 +1,17 @@
+import { Element } from 'react-scroll';
 import React, { Component } from 'react';
 
 export default class Section extends Component {
 
   render() {
-    const { Child, href } = this.props
+    const { Child, name } = this.props
 
     return (
-      <div className='section' id={ href }>
-        <Child />
-      </div>
+      <Element name={ name }>
+        <div className='section'>
+            <Child />
+        </div>
+      </Element>
     )
   }
 }

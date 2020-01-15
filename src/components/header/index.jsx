@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 import { Layout, Menu } from 'antd';
+import { scroller } from 'react-scroll';
 
 export default class Header extends Component {
 
-  renderMenuItem = ({ href, title }, index) => {
+  handleMenuItemClick = ({ key }) => {
+    const options = {
+      offset: -64,
+      smooth: true
+    };
+
+    scroller.scrollTo(key, options);
+  }
+
+  renderMenuItem = ({ name, title }) => {
     return (
-      <Menu.Item key={ `menuitem-${index}`  }>
-        <a href={ href }>
-          { title }
-        </a>
+      <Menu.Item
+        key={ name }
+        onClick={ this.handleMenuItemClick }
+      >
+        { title }
       </Menu.Item>
     );
   }
