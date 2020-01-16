@@ -1,3 +1,4 @@
+const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -5,6 +6,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const paths = {
+  assets: path.resolve(__dirname, 'assets'),
   entry: path.resolve(__dirname, 'src/index.jsx'),
   html: path.resolve(__dirname, 'index.html'),
   public: path.resolve(__dirname, 'dist/'),
@@ -22,9 +24,11 @@ const configurations = {
     }
   },
   production: {
-    plugins: [new MiniCssExtractPlugin({
-      filename: 'style.css'
-    })],
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: 'style.css'
+      })
+    ],
     optimization: {
       minimize: true,
       minimizer: [new TerserPlugin()]
@@ -70,6 +74,12 @@ const getBaseConfiguration = (isDevelopment) => {
       ]
     },
     plugins: [
+      new CopyPlugin([
+        {
+          from: paths.assets,
+          to: paths.public
+        }
+      ]),
       new Dotenv()
     ]
   }

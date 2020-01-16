@@ -1,3 +1,4 @@
+import { Avatar } from 'antd';
 import { Icon } from '@iconify/react';
 import fiverrIcon from '@iconify/icons-jam/fiverr';
 import githubIcon from '@iconify/icons-fa-brands/github';
@@ -20,6 +21,16 @@ const icons = [{
 }];
 
 export default class AboutMe extends Component {
+
+  renderAvatar() {
+    return (
+      <Avatar
+        shape='circle'
+        size={ 180 }
+        src='/assets/profile.jpeg'
+      />
+    );
+  }
 
   renderIcon({ href, icon}, index) {
     return (
@@ -44,11 +55,20 @@ export default class AboutMe extends Component {
     );
   }
 
+  renderTitle() {
+    return (
+      <div className='about-me__title'>
+        <h1>Welcome, I'm Agustín Fiorenza</h1>
+        <h2>Frontend developer</h2>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className='about-me'>
-        <h1>Welcome, I'm Agustín Fiorenza</h1>
-        <h2>Frontend developer</h2>
+        { this.renderAvatar() }
+        { this.renderTitle() }
         { this.renderIcons() }
       </div>
     );

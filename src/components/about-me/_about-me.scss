@@ -1,17 +1,33 @@
 .about-me {
-  background-color: green;
+  position: relative;
   text-align: center;
+
+  &:after {
+    background: url('/assets/backgrounds/about-me.jpg') no-repeat center center;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
 
   &__icons {
     display: flex;
     flex-direction: row;
     font-size: 2.5rem;
     justify-content: space-evenly;
-    margin-top: 1.5rem;
     width: 30rem;
   }
 
   &__link {
     color: rgb(33, 37, 41);;
+  }
+
+  &__title {
+    margin: 40px 0;
   }
 }
