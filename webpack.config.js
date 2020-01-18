@@ -1,5 +1,6 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -8,7 +9,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const paths = {
   assets: path.resolve(__dirname, 'assets'),
   entry: path.resolve(__dirname, 'src/index.jsx'),
-  html: path.resolve(__dirname, 'index.html'),
+  html: path.resolve(__dirname, 'src/index.html'),
   public: path.resolve(__dirname, 'dist/'),
   src: path.resolve(__dirname, 'src')
 }
@@ -16,7 +17,8 @@ const paths = {
 const configurations = {
   development: {
     devServer: {
-      publicPath: '/dist/',
+      contentBase: '/dist/',
+      publicPath: '/',
       hot: true,
       inline: true,
       port: 8080,
@@ -77,10 +79,14 @@ const getBaseConfiguration = (isDevelopment) => {
       new CopyPlugin([
         {
           from: paths.assets,
-          to: paths.public
+          to: path.resolve(paths.public, 'assets')
         }
       ]),
-      new Dotenv()
+      new Dotenv(),
+      new HtmlWebpackPlugin({
+        filename: isDevelopment ? path.resolve(paths.public, 'index.html') : path.resolve(__dirname, 'index.html'),
+        template: paths.html
+      })
     ]
   }
 };
