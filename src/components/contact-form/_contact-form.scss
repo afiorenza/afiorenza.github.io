@@ -1,0 +1,9 @@
+.contact-form {
+  width: 40%;
+
+  &__submit-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

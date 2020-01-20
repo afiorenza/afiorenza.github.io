@@ -1,0 +1,12 @@
+@keyframes JUMP {
+  0% { margin-bottom: 0; }
+  50% { margin-bottom: 10px; }
+  100% { margin-bottom: 0; }
+}
+
+.go-to-top {
+  animation: JUMP 1.5s infinite;
+  color: $dark-yellow;
+  display: inline-block;
+  font-size: 3rem;
+}

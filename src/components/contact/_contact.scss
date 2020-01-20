@@ -1,3 +1,23 @@
 .contact {
-  background-color: red;
+  background-color: #4c5057;
+  position: relative;
+  text-align: center;
+
+  &__title,
+  &__social-subtitle {
+    color: $dark-yellow;
+  }
+
+  &__social {
+    margin-top: 30px;
+  }
+
+  &__social-subtitle {
+    margin-bottom: 15px;
+  }
+
+  &__go-top {
+    bottom: 30px;
+    position: absolute;
+  }
 }
